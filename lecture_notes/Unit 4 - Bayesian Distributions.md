@@ -340,6 +340,41 @@ f(x) &= \frac{1}{\sqrt{2\pi\cdot\frac{5}{4}}}e^{-\frac{x^2}{2\cdot\frac{5}{4}}} 
 
 Thus, the marginals are normal $X \sim N(0, (\frac{\sqrt{5}}{2})^2)$ and $Y \sim N(0, (\frac{1}{2})^2)$.
 
+We are not yet done! Remember that we still have to find the conditional distributions $f(x|y)$ and $f(y|x)$. 
+
+By definition, $f(x| y) = \frac{f(x, y)}{f(y)}$ (as introduced above). We know the joint distribution, $f(x, y)$, as this was given, and we have already calculated the marginal distributions $f(x)$ and $f(y)$ above. Therefore,
+
+$$\large{
+\begin{aligned}
+f(x|y) &= \frac{\frac{1}{\pi}e^{-\frac{1}{2}(x^2-2xy+5y^2)}}{\frac{1}{\sqrt{2\pi\cdot\frac{1}{4}}}\cdot e^{-\frac{1}{2}\cdot4y^2}} \\ \\
+&= \frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}(x-y)^2}, \quad x\in \mathbb{R} \\ \\
+&\rightarrow X|Y = y \sim N(y, 1)
+\end{aligned}
+}$$
+Similarly for $f(y|x)$, 
+$$\large{
+\begin{aligned}
+f(y|x) &= \frac{\frac{1}{\pi}e^{-\frac{1}{2}(x^2-2xy+5y^2)}}{\frac{1}{\sqrt{2\pi\cdot\frac{5}{4}}}\cdot e^{-\frac{1}{2}\cdot x^2\cdot\frac{4}{5}}} \\ \\
+&= \frac{1}{\sqrt{2\pi\cdot\frac{1}{5}}}e^{-\frac{1}{2\cdot\frac{1}{5}}(y - \frac{x}{5})^2}, \quad y\in \mathbb{R} \\ \\
+&\rightarrow Y|X = x \sim N(\frac{x}{5}, (\frac{1}{\sqrt{5}})^2)
+\end{aligned}
+}$$
+##### Example: Independent 2D
+
+Let us now take a look at an easier example. If $f(x, y) = 2xe^{-x-2y}$, where $x \geq 0, y \geq 0$, find conditional distributions for $f(x| y)$ and $f(y|x)$.
+
+$x$ and $y$ are deemed "separate variables", as the joint distribution can be represented as a product of two densities.
+$$f(x, y) = xe^{-x} \cdot 2e^{-2y} = f(x)\cdot f(y) $$
+Therefore, $X$ and $Y$ are independent components. $f(x|y) = f(x)$ and $f(y|x) = f(y)$.
+
+Take a moment to understand why this simple reorganisation works. 
+- In order to calculate the marginal distributions, we integrate $f(x, y)$ with respect to $x$ or $y$. More concretely, if we were interested in finding the marginal distribution $f(y)$, we would fix $2e^{-2y}$ as a constant and integrate over $xe^{-x}$ with respect to $x$.
+- $f(x|y)$ is defined as $\large{\frac{f(x, y)}{f(y)}}$. From the factorisation above, we get that $f(x|y) = \frac{f(x)f(y)}{f(y)} = f(x)$.
+
+In summary, whenever we have the **independence condition** whereby the joint distribution splits into the product of two densities, the conditional distributions are equal to the marginals.
+
+
+
 
 
 
