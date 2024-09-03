@@ -1,0 +1,169 @@
+{
+  "main": {
+    "id": "a3194bba917a4d22",
+    "type": "split",
+    "children": [
+      {
+        "id": "1f0f11ccfc0f9040",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1b2ef4952374ae0c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Unit 4 - Bayesian Distributions.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ce82009943e5f936",
+    "type": "split",
+    "children": [
+      {
+        "id": "f88d51d71b0a0d4f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a936e46368f4f9af",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5ba55bccc2ea335d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e8ecad77e6fb6d4d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "692d9316596a8d3e",
+    "type": "split",
+    "children": [
+      {
+        "id": "8e5273433e2020ad",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "11b14ddd54001ba3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Unit 4 - Bayesian Distributions.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e7643bb707500e99",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Unit 4 - Bayesian Distributions.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9d452b645eb17862",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "8204ed51d82e98ca",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Unit 4 - Bayesian Distributions.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "1b2ef4952374ae0c",
+  "lastOpenFiles": [
+    "attachments/Pasted image 20240902164738.png",
+    "attachments/Pasted image 20240831062823.png",
+    "attachments/Pasted image 20240830200035.png",
+    "attachments/Pasted image 20240830195742.png",
+    "attachments/Pasted image 20240830195425.png",
+    "attachments/Pasted image 20240830194800.png",
+    "attachments/Pasted image 20240830194727.png",
+    "Unit 4 - Bayesian Distributions.md",
+    "attachments/Pasted image 20240830194739.png",
+    "Unit 3 - A Refresher on Probability.md",
+    "Assignment1.md",
+    "Assignment1.pdf",
+    "attachments/Pasted image 20240827205543.png",
+    "attachments/Pasted image 20240826200826.png",
+    "attachments/Pasted image 20240826200811.png",
+    "Unit 2 - History and Introduction.md",
+    "attachments"
+  ]
+}
