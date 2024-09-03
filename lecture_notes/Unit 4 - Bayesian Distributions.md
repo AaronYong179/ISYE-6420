@@ -373,8 +373,108 @@ Take a moment to understand why this simple reorganisation works.
 
 In summary, whenever we have the **independence condition** whereby the joint distribution splits into the product of two densities, the conditional distributions are equal to the marginals.
 
+## Bayesian Inference
 
+### Components
 
+#### Initial Model and Joint Distribution
 
+We start with the **model**. Observations $X_1, \cdots, X_n$ from the experiment are modelled by the statistical model, denoted as: $$X_i \sim \stackrel{iid}f(x_i|\theta) , \quad i = 1, \cdots, n $$The $iid$ here indicates that $X_i$ are independently distributed. $\theta$ here is the parameter.
+
+The joint distribution of the sample $X_1, \cdots, X_n$ is simply the product of all individual components:
+$$f(x_1|\theta) \times f(x_2|\theta) \times \cdots \times f(x_n | \theta) = \prod_{i=1}^nf(x_i|\theta)$$
+#### Likelihood
+
+Notice that the $x$ -es are observations, which might not have any value _before_ the experiment. However, once the experiment is done, we have our observations that we can plug into the expression above. More formally, as a function of $\theta$, the joint distribution $\prod_{i=1}^nf(x_i|\theta)$ is called the **likelihood**.
+$$ L(\theta|x_1, \cdots, x_n) = \prod_{i=1}^nf(x_i|\theta)$$
+According to the **Likelihood Principle**, all information about the experiment is contained within the likelihood -- the model, parameters, observations, and so on are all included.
+
+As an example, consider the following:
+
+Each $X_i$ is sampled from an exponential distribution, $Exp(\lambda)$. Let $X_1 = 2$, $X_2 = 3$, and $X_3 = 1$ to be the observations. Then the likelihood is:
+$$ L(\lambda | x_1, x_2, x_3) = \lambda e^{-2\lambda}\times\lambda e^{-3\lambda} \times \lambda e^{-\lambda} = \lambda^3e^{-6\lambda}$$
+If the data are kept unspecified:
+$$ \large{L(\lambda|x_1, x_2, x_3) = \lambda^3e^{-\lambda\sum_{i=1}^3x_i}}$$
+#### Parameters and Priors
+
+Let $\theta$ be a parameter in $f(x|\theta)$. 
+
+Recall that the Classical statistician views the parameter as some fixed, unknown value. The inference in that case is concerned with this unknown number. However, the Bayesian statistician views the parameter as a **distribution**.
+- This distribution represents the uncertainty of this parameter. The distribution can be very "certain" -- concentrated at a point mass at some value. The distribution might have a very large variance if we are less certain about this parameter.
+
+More formally, **a prior is a distribution on** $\theta$.
+
+$$ 
+\begin{aligned}
+\theta \sim \pi(\theta), \quad &\theta \in \Theta \\
+&\Theta \equiv \text{parameter space}
+\end{aligned}$$
+Now we may think of $X$, which are our measurements, and $\theta$ as a vector of two random variables. Therefore, we can also find the joint distribution of $(X, \theta)$, which is $h(x, \theta)$.
+
+The marginal distribution of $X$ then is:
+$$ m(x) = \int_\Theta h(x,\theta) \, d\theta$$
+### Bayes' Theorem
+
+Recall Bayes' Rule for events:
+
+$$P(AH_i) = P(A|H_i)P(H_i)= P(H_i|A)P(A) $$
+$$ \Rightarrow P(H_i|A) = \frac{P(A|H_i)P(H_i)}{P(A)}$$
+
+For distributions, we use **Bayes' Theorem** instead, which we can derive by analogy:
+$$h(x, \theta) = f(x|\theta)\pi(\theta) = \pi(\theta|x)m(x)$$
+The notations are as follows:
+- $h(x,\theta)$ is the joint distribution
+- $f(x|\theta)$ is the likelihood
+- $\pi(\theta)$ is the prior
+- $\pi(\theta|x)$ is the posterior
+- $m(x)$ is the marginal
+
+In other words, the joint distribution of $x$ and $\theta$ can be represented as:
+- The product of the likelihood of the model and the prior, or
+- The product of the posterior and the marginal
+
+Rearranging the rightmost two terms, we get Bayes' (or Bayes) Theorem:
+$$ \pi(\theta|x) = \frac{f(x|\theta)\pi(\theta)}{m(x)}$$
+
+Let's consider an example involving a normally distributed likelihood and a normally distributed prior.
+
+Suppose we have an observation $x$ given $\theta$ which follows a normal distribution. Let $x|\theta \sim N(\theta, \sigma^2)$ and assume that $\sigma^2$ is known. The parameter of interest here is $\theta$, which represents the shift of this distribution.
+
+Now we know that the prior on $\theta$ is normally distributed. Let $\theta \sim N(\mu, \tau^2)$. Here, $\mu$ and $\tau$ are elicited. 
+- $\mu$ and $\tau$ are also called **hyperparameters**, as they are the parameters of the distribution of the parameter.
+
+Let us now take the joint distribution $h(x|\theta)$. From the definitions given above, we will take the product of the likelihood and the prior.
+$$ \large{
+h(x|\theta) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{1}{2\sigma^2}(x-\theta)^2} \times \frac{1}{\sqrt{2\pi\tau^2}}e^{-\frac{1}{2\tau^2}(\theta-\mu)^2}
+}$$
+To make life (much) easier for us, let us simply consider the exponent portions. These will be denoted with $\text{exp}\{\}$.
+$$\begin{aligned}
+&\text{exp}\left\{-\frac{1}{2\sigma^2}(x-\theta)^2 - \frac{1}{2\tau^2}(\tau-\mu)^2\right\} \equiv \\ \\
+&\text{exp}\left\{-\frac{\sigma^2+\tau^2}{2\sigma^2\tau^2}\left(\theta - \left(\frac{\tau^2}{\sigma^2+\tau^2}x + \frac{\sigma^2}{\sigma^2+\tau^2}\mu\right)\right)^2 - \frac{1}{2(\sigma^2+\tau^2)}(x-\mu)^2\right\}
+\end{aligned}$$
+
+Notice that the exponent above splits into two parts, one containing $\theta$ and the other $\theta$-free. 
+- Recall from above that the joint distribution can be represented either as $f(x|\theta)\pi(\theta)$ or $\pi(\theta|x)m(x)$.
+- Since we started with $f(x|\theta)\pi(\theta)$, the exponent above corresponds to $\pi(\theta|x)m(x)$.
+
+Quite simply then, the marginal distribution, $m(x)$, resolves to $X \sim N(\mu, \sigma^2+ \tau^2)$. 
+
+The posterior distribution, $\pi(\theta|x)$, on the other hand resolves to:
+$$ \theta | X \sim N\left(\frac{\tau^2}{\sigma^2 + \tau^2}x + \frac{\sigma^2}{\sigma^2+\tau^2}\mu, \, \frac{\sigma^2\tau^2}{\sigma^2+\tau^2}\right) $$
+
+A few things to note about the above posterior distribution:
+- The mean is composed of "what is observed" ($x$) and "what is believed ($\mu$)".
+- The weights of the observation and belief sum up to 1. In other words, the mean is a **compromise** between the observation and the belief.
+- The weights depend solely on the variance of both the observation and the belief. In other words, "how sure are you about $x$?" and "how sure are you about $\mu$?"
+
+Let us rewrite the posterior mean, using $w$ to represent the weights of the observed $x$ and the elicited $\mu$. Note that since it is given that we are dealing with normal distributions, the mean = mode = median.
+$$ \frac{\tau^2}{\sigma^2 + \tau^2}x + \frac{\sigma^2}{\sigma^2+\tau^2}\mu = w\cdot x + (1-w)\cdot x$$
+If:
+- $\tau^2 \gg \sigma^2 \rightarrow w \approx 1$, the posterior mean is closer to $x$. Alternatively, since $\sigma^2$ is small, we are more certain about the observations than the prior belief.
+- $\sigma^2 \gg \tau^2 \rightarrow w \approx 1$, the posterior mean is closer to $\mu$. Alternatively, since $\tau^2$ is small, we are more certain about the prior belief than the observations from the experiment.
+
+In a very natural way, most of the Bayes rules that we are going to discuss take on the form of a **compromise** between what is observed and what is believed.
+
+### Conjugate Families
 
 
