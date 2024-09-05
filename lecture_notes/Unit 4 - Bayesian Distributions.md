@@ -477,4 +477,23 @@ In a very natural way, most of the Bayes rules that we are going to discuss take
 
 ### Conjugate Families
 
+In the last example, we had a Normal likelihood and a Normal prior. Finding the the Posterior was relatively straightforward; the posterior turned out to be Normal as well. This is also called a **conjugate family**. 
+
+More formally, if for a likelihood $f$ and prior $\pi$ the **prior and posterior belong to the same family of distributions**, then the pair $(f, \pi)$ is conjugate.
+
+Now if the pair $(f, \pi$) is conjugate, there is no need to calculate the normalising constant, $m(x)$, in $f(x|\theta)\pi(\theta) \propto \pi(\theta|x)$. 
+- Recall from Bayes' Theorem that $\pi(\theta|x) = \frac{f(x|\theta)\pi(\theta)}{m(x)}$.
+- Basically, if $(f, \pi)$ is conjugate, there is no need to calculate $m(x)$, which is the marginal distribution of $x$!
+- Recall also that $m(x)$ is calculated by integrating the joint distribution of $x$ and $\theta$, $h(x, \theta)$, with respect to the parameter, $\theta$. This integration is usually the "troublemaker" in Bayesian statistics, as it is often not feasible.
+- Simply put, if we can conclude the form of the posterior from the product of the likelihood and the prior, $f(x|\theta)\pi(\theta)$, there is no need to perform integration.
+
+#### Example: Binomial likelihood, Beta prior
+
+Let us now take a look at another example, this time involving a Binomial likelihood and a Beta prior. 
+
+Suppose we do not know the probability of success, $p$, but we have conducted $n$ experiments and obtained the number of successes, $x$. We model this number of successes with the Binomial distribution:
+$$ X|p \sim Bin(n, p); \quad f(x|p) = {n\choose x}p^x(1-p)^{n-x}$$
+
+
+
 
