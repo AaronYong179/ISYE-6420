@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Unit 4 - Bayesian Distributions.md",
+                "file": "Unit 4.1 - 4.3; Bayesian Distributions.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3044b96b6c9006f1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Unit 4.4 - 4.9; Bayesian Distributions.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Unit 4 - Bayesian Distributions.md",
+                "file": "Unit 4.4 - 4.9; Bayesian Distributions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Unit 4 - Bayesian Distributions.md",
+                "file": "Unit 4.4 - 4.9; Bayesian Distributions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Unit 4 - Bayesian Distributions.md"
+                "file": "Unit 4.4 - 4.9; Bayesian Distributions.md"
               }
             }
           }
@@ -146,12 +159,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1b2ef4952374ae0c",
+  "active": "3044b96b6c9006f1",
   "lastOpenFiles": [
-    "Untitled.md",
-    "Unit 4 - Bayesian Distributions.md",
-    "Unit 3 - A Refresher on Probability.md",
-    "Unit 2 - History and Introduction.md",
+    "Unit 4.1 - 4.3; Bayesian Distributions.md",
+    "Unit 4.4 - 4.9; Bayesian Distributions.md",
+    "Unit 2; History and Introduction.md",
+    "Unit 3; A Refresher on Probability.md",
     "attachments/Pasted image 20240902164738.png",
     "attachments/Pasted image 20240831062823.png",
     "attachments/Pasted image 20240830200035.png",
