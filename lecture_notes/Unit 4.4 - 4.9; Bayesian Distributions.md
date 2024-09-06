@@ -249,6 +249,88 @@ $$\begin{aligned}
 Notice that the estimator ($99.4118$) is valued closer to the observations ($98$) instead of what was believed in the prior ($110$). Why is that?
 - The variance of the observations is much smaller now, at $\frac{80}{5}$. Therefore, we put more weight on the more certain observations than the less certain prior.
 
+#### 10 Flips of a Fair Coin (Binomial, Beta)
 
+We have already discussed the conjugacy of Binomial likelihood, $x|p\sim Bin(n, p)$ and Beta prior $p \sim Be(\alpha, \beta)$. The posterior also follows a Beta distribution, $p|X \sim Be(X +\alpha, n-X+\beta)$.
 
- 
+Here we are using the Beta distribution to model the probability of the coin landing on heads. Beta priors have **excellent expressive power** about the population proportion $p$.
+- We are able to model many different probabilities, including centered or even skewed distributions. 
+- To do this, a computational tool is required to plot the many Beta distributions. The figure below shows the various possible Beta distributions given a tuple of $\alpha, \beta$ parameters.
+
+![[Pasted image 20240906212851.png]]
+
+Going through them one by one:
+- Having the parameters $(0.5, 0.5)$ models an event where it is either impossible or sure.
+- Having the parameters $(1, 1)$ gives us a uniform distribution.
+- Having the parameters $(2, 2)$ gives us a dome shaped distribution, with a strong preference for the center value, $0.5$. Increasing both parameters at the same rate $(10, 10)$ increases the preference for the center value.
+- We can also skew the distribution if both parameters are unequal. Notice the same trend, where if we wish to accentuate certain probabilities, $\alpha$ and $\beta$ should take on large numerical values (e.g., $(5000, 3000)$).
+
+For a coin flip, a perhaps reasonable prior distribution could be $p \sim Be(500, 500)$. This would give us a band right above 0.5, which reflects how a fair coin should behave.
+
+![[Pasted image 20240906213400.png]]
+
+However, note that some deviation from 0.5 is allowed -- it is impossible after all to find a completely fair coin in real life. 
+
+Suppose that our prior is modelled as $p \sim Be(500, 500)$. Suppose also that we performed the experiment, flipping the coin ten times. The observed $X$ was equal to $0$ -- no heads turned up.
+
+Simply subbing the relevant values into the posterior gives us:
+
+$$
+\begin{aligned}
+p|X \sim Be(X +\alpha, n-X+\beta) \\ \\
+\Rightarrow Be(0 + 500, 10-0 + 500)
+\end{aligned}
+$$
+
+Thus, the posterior mean is simply:
+
+$$
+\begin{aligned}
+E(p|X) &= \frac{x+\alpha}{n+\alpha+\beta} \\ \\
+&= \frac{0+500}{10+500+500} = \frac{500}{1010} = 0.495
+\end{aligned}
+$$
+
+This is much more realistic than the frequentist's $\hat{p} = 0$. Even though we had 10 tails in a row, we simply updated our understanding of the prior to the reasonable estimate of the posterior.
+
+#### Cell Culture (Poisson, Gamma)
+
+Suppose that we have six culture flasks, each containing a large number of cells. These flasks are individually checked for the presence of "marked" cells. The number of these "marked" cells are counted. For example, the number of GFP-expressing cells are counted.
+
+Suppose we have the following observations, $X_1 = 2, X_2=0, X_3=1,X_4=5,X_5=7,X_6=1$.
+
+Assume that $X_i|\lambda \sim Pois(\lambda)$. Estimate $\lambda$ if the prior on $\lambda$ is Gamma with mean 4 and variance 1/4.
+> The lecture likes to use the phrase "elicit" prior. I believe this means that we are using previous or theoretical knowledge to "elicit" some belief system, which would be represented by the prior.
+
+Firstly, form the likelihood. We have a Poisson distributed random variable with multiple observations.
+$$
+\frac{\lambda^2}{2!}e^{-\lambda} \times \frac{\lambda^0}{0!}e^{-\lambda} \times \frac{\lambda^1}{1!}e^{-\lambda} \times \frac{\lambda^5}{5!}e^{-\lambda} \times \frac{\lambda^7}{7!}e^{-\lambda} \times \frac{\lambda^1}{1!}e^{-\lambda}
+$$
+$$
+\propto \lambda^{16}e^{-\lambda}
+$$
+- The "16" is essentially a summation of all the counts obtained.
+
+The prior is elicited to be $\theta \sim Ga(\alpha, \beta)$. We also set $E(\theta) = \frac{\alpha}{\beta} = 4$ , and $\text{Var}(\theta) = \frac{\alpha}{\beta^2} = \frac{1}{4}$
+
+Given just the prior, we have two equations with two unknowns. Solving for $\alpha$ and $\beta$, 
+$$
+\begin{aligned}
+\frac{\alpha}{\beta}\times\frac{1}{\beta} &= \frac{1}{4} \\ \\
+\beta &= 4 \times 4 = 16 \\ \\
+\therefore \alpha &= 4 \times 16 = 64
+\end{aligned}
+$$
+
+We therefore have the prior to be $\theta \sim Ga(64, 16)$.
+
+The posterior is simply:
+$$ \lambda |x \sim Ga\left(\sum_i x_i + \alpha, n+\beta\right)$$
+The mean of the posterior is:
+$$
+\hat{\lambda}_B = \frac{\alpha + \sum X_i}{n +\beta} = \frac{64+16}{6+16} = 3.6364
+$$
+
+The frequentist would simply obtain $\hat{\lambda}_{MLE} = \bar{X} = \frac{16}{6} = 2.666$
+
+Notice that again, the posterior mean is much closer to the prior mean than the MLE estimate (maximum likelihood estimator).
