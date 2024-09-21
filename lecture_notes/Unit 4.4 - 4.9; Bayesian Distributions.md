@@ -1,4 +1,4 @@
-## Bayesian Inference
+## Bayesian Inference (Introduction)
 
 ### Components
 
@@ -334,3 +334,5 @@ $$
 The frequentist would simply obtain $\hat{\lambda}_{MLE} = \bar{X} = \frac{16}{6} = 2.666$
 
 Notice that again, the posterior mean is much closer to the prior mean than the MLE estimate (maximum likelihood estimator).
+
+---

@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "1f0f11ccfc0f9040",
+        "id": "3411d1da1e646f43",
         "type": "tabs",
         "children": [
           {
-            "id": "1b2ef4952374ae0c",
+            "id": "e5964d5c12679252",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Unit 4.1 - 4.3; Bayesian Distributions.md",
+                "file": "Unit 4.9 - 4.13; Bayesian Distributions.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "3044b96b6c9006f1",
+            "id": "c566d67136725cc6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Unit 4.4 - 4.9; Bayesian Distributions.md",
+                "file": "Unit 4.14 -; Bayesian Distributions.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Unit 4.4 - 4.9; Bayesian Distributions.md",
+                "file": "Unit 4.14 -; Bayesian Distributions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Unit 4.4 - 4.9; Bayesian Distributions.md",
+                "file": "Unit 4.14 -; Bayesian Distributions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Unit 4.4 - 4.9; Bayesian Distributions.md"
+                "file": "Unit 4.14 -; Bayesian Distributions.md"
               }
             }
           }
@@ -159,25 +159,27 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3044b96b6c9006f1",
+  "active": "c566d67136725cc6",
   "lastOpenFiles": [
+    "Unit 4.9 - 4.13; Bayesian Distributions.md",
+    "Unit 4.14 -; Bayesian Distributions.md",
+    "Unit 4.4 - 4.9; Bayesian Distributions.md",
+    "attachments/a301739aaa54d292e4e16fa05a8994df681eb07addbd4cadb9561bc450a22b63.png",
+    "attachments/467d58d841a4d679f95d18b0111801520a392232fab7141cace9d0e27a06d298.png",
+    "attachments/Pasted image 20240910202202.png",
+    "Unit 4.1 - 4.3; Bayesian Distributions.md",
+    "Homework 2.md",
+    "Unit 3; A Refresher on Probability.md",
+    "attachments/Pasted image 20240907153457.png",
     "attachments/Pasted image 20240906213400.png",
     "attachments/Pasted image 20240906212851.png",
-    "Unit 4.1 - 4.3; Bayesian Distributions.md",
-    "Unit 4.4 - 4.9; Bayesian Distributions.md",
     "Unit 2; History and Introduction.md",
-    "Unit 3; A Refresher on Probability.md",
     "attachments/Pasted image 20240902164738.png",
     "attachments/Pasted image 20240831062823.png",
     "attachments/Pasted image 20240830200035.png",
     "attachments/Pasted image 20240830195742.png",
-    "attachments/Pasted image 20240830195425.png",
-    "attachments/Pasted image 20240830194800.png",
-    "attachments/Pasted image 20240830194727.png",
-    "attachments/Pasted image 20240830194739.png",
     "Assignment1.md",
     "Assignment1.pdf",
-    "attachments/Pasted image 20240827205543.png",
     "attachments"
   ]
 }
