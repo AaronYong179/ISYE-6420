@@ -42,6 +42,8 @@ L_c(\theta) =
 1, \quad \text{else}
 \end{cases}
 $$
+The posterior mode is also termed MAP (maximum _a posteriori_ probability estimate).
+
 #### The Bayes Estimator
 
 The posterior mean is also connected with **Bayes risk** (though note that Bayes risk is not _really_ Bayesian). Bayes risk is given as:
