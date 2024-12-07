@@ -4,18 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "2333594c8adfc255",
+        "id": "bd345693b9d562e7",
         "type": "tabs",
         "children": [
           {
-            "id": "2856c72f2fee10f7",
+            "id": "4cc7e0e918c40dc4",
             "type": "leaf",
             "state": {
               "type": "empty",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "237ccde3d6006a16",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Finals.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Finals"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -35,7 +52,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -50,7 +69,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -58,7 +79,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -81,6 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Unit 5; Bayesian Computation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,7 +112,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Unit 5; Bayesian Computation"
             }
           },
           {
@@ -97,9 +123,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Unit 5; Bayesian Computation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Unit 5; Bayesian Computation"
             }
           },
           {
@@ -110,7 +139,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -118,7 +149,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Finals.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Finals"
             }
           }
         ],
@@ -138,28 +173,37 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2856c72f2fee10f7",
+  "active": "237ccde3d6006a16",
   "lastOpenFiles": [
-    "Unit 5; Bayesian Computation.md",
-    "Homework 4.md",
-    "attachments/Pasted image 20241009170456.png",
-    "attachments/Pasted image 20241009165613.png",
-    "attachments/Pasted image 20241007210317.png",
-    "attachments/Pasted image 20241007205420.png",
-    "attachments/Pasted image 20241007205333.png",
-    "attachments/Pasted image 20241007203406.png",
-    "attachments/Pasted image 20241007200641.png",
-    "attachments/Pasted image 20241007200617.png",
-    "attachments/Pasted image 20241007195622.png",
-    "Unit 4.1 - 4.3; Bayesian Distributions.md",
+    "Homework 6.md",
+    "Finals.md",
+    "Unit 7; Bayesian Models.md",
+    "Unit 8; Missing Data.md",
+    "Unit 9; Model Fit and Selection.md",
+    "Project.md",
+    "attachments/Pasted image 20241207125817.png",
+    "attachments/Pasted image 20241207125807.png",
     "Unit 4.4 - 4.9; Bayesian Distributions.md",
-    "Unit 4.9 - 4.13; Bayesian Distributions.md",
     "Unit 4.14 - 4.19; Bayesian Distributions.md",
-    "attachments/Pasted image 20241003062441.png",
+    "Unit 5; Bayesian Computation.md",
+    "Unit 6; Graphical Models.md",
+    "attachments/Pasted image 20241111090621.png",
+    "attachments/Pasted image 20241111090309.png",
+    "attachments/Pasted image 20241104203627.png",
+    "attachments/Pasted image 20241104175510.png",
+    "Homework 5.md",
+    "Unit 4.9 - 4.13; Bayesian Distributions.md",
+    "attachments/Pasted image 20241026155055.png",
+    "attachments/Pasted image 20241026154845.png",
+    "attachments/Pasted image 20241026154726.png",
+    "Midterms.md",
+    "Unit 4.1 - 4.3; Bayesian Distributions.md",
+    "Unit 2; History and Introduction.md",
+    "Unit 3; A Refresher on Probability.md",
+    "attachments/Pasted image 20241019165714.png",
+    "Homework 4.md",
     "Homework 3.md",
     "Homework 2.md",
-    "Unit 3; A Refresher on Probability.md",
-    "Unit 2; History and Introduction.md",
     "Assignment1.md",
     "Assignment1.pdf",
     "attachments"
