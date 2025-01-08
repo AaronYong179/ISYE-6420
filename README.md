@@ -1,0 +1,1 @@
+A compilation of lecture notes for Georgia Tech's Bayesian Statistics course, ISYE-6420. Assignments, examinations, and project documents are not uploaded.
